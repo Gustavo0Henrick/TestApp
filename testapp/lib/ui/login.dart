@@ -12,10 +12,11 @@ class _LoginState extends State<Login> {
   Color color = Colors.blue[800];
   TextEditingController userController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  bool obscureText = true;
+
   bool switchValue = false;
   @override
   Widget build(BuildContext context) {
+    bool obscureText = true;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -72,6 +73,7 @@ class _LoginState extends State<Login> {
                   CustomTextfield(
                     password: false,
                     color: Colors.blue[800],
+                    obscureText: false,
                     controller: userController,
                     height: 45,
                     width: 350,

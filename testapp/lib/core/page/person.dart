@@ -206,7 +206,7 @@ class Person extends StatelessWidget {
                         ),
                         onPressed: () {},
                         child: Icon(
-                          Icons.person_add,
+                          Icons.call,
                           color: Colors.blue[800],
                         )),
                   ),

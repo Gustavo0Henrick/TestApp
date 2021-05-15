@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
         width: 64,
         child: FloatingActionButton(
           heroTag: null,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.blueAccent[300],
           onPressed: () {
             setState(() {
               currentScreen = Home();
@@ -48,10 +48,10 @@ class _HomePageState extends State<HomePage> {
           },
           child: Icon(
             Icons.home_rounded,
-            color: Colors.blue[900],
+            color: Colors.white,
             size: 34,
           ),
-          elevation: 0,
+          elevation: 10,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testapp/core/user_list.dart';
+import 'package:testapp/ui/login.dart';
 
 class Config extends StatelessWidget {
   @override
@@ -88,7 +89,12 @@ class Config extends StatelessWidget {
                     children: [
                       Expanded(
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (builder) => Login()));
+                          },
                           child: Text(
                             'Sair',
                             style: TextStyle(

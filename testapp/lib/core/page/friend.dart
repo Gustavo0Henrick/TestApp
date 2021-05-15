@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/core/page/person.dart';
+import 'package:testapp/core/user_list.dart';
 
 class Friend extends StatelessWidget {
   @override
@@ -10,7 +12,7 @@ class Friend extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          'Friends',
+          'Amigos',
           style: TextStyle(
             color: Colors.white,
             fontSize: 24,
@@ -18,20 +20,62 @@ class Friend extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Text(
-              'Lista de Amigos vazia',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
+      body: ListView(
+        children: ListTile.divideTiles(
+          context: context,
+          tiles: [
+            ListTile(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (builder) => Person(index: 3)));
+              },
+              leading: Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(100)),
+                height: 30,
+                width: 30,
+                child: Icon(
+                  Icons.person,
+                  color: Colors.blue[700],
+                ),
+              ),
+              title: Text(
+                '${ListUser.name[3]}',
+                style: TextStyle(color: Colors.white),
+              ),
+              subtitle: Text(
+                '${ListUser.email[3]}',
+                style: TextStyle(color: Colors.white),
               ),
             ),
-          )
-        ],
+            ListTile(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (builder) => Person(index: 0)));
+              },
+              leading: Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(100)),
+                height: 30,
+                width: 30,
+                child: Icon(
+                  Icons.person,
+                  color: Colors.blue[700],
+                ),
+              ),
+              title: Text(
+                '${ListUser.name[0]}',
+                style: TextStyle(color: Colors.white),
+              ),
+              subtitle: Text(
+                '${ListUser.email[0]}',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ],
+        ).toList(),
       ),
     );
   }

@@ -19,76 +19,25 @@ class Galery extends StatelessWidget {
         centerTitle: true,
       ),
       backgroundColor: Colors.blue[800],
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.only(top: 30),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: MediaQuery.of(context).size.height * 1.2,
-                    width: MediaQuery.of(context).size.width * 0.5,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CustomCard(
-                          icon: Icons.image,
-                          title: 'Image A',
-                        ),
-                        CustomCard(
-                          icon: Icons.image,
-                          title: 'Image C',
-                        ),
-                        CustomCard(
-                          icon: Icons.image,
-                          title: 'Image E',
-                        ),
-                        CustomCard(
-                          icon: Icons.image,
-                          title: 'Image G',
-                        ),
-                        CustomCard(
-                          icon: Icons.image,
-                          title: 'Image I',
-                        ),
-                      ],
-                    ),
+      body: Center(
+        child: Container(
+          padding: EdgeInsets.only(bottom: 10),
+          height: MediaQuery.of(context).size.height * 0.75,
+          width: MediaQuery.of(context).size.width * 1,
+          child: GridView.count(
+            crossAxisCount: 2,
+            children: List.generate(10, (index) {
+              return Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Container(
+                  child: CustomCard(
+                    icon: Icons.image,
+                    title: 'Image $index',
                   ),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 1.2,
-                    width: MediaQuery.of(context).size.width * 0.5,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CustomCard(
-                          icon: Icons.image,
-                          title: 'Image B',
-                        ),
-                        CustomCard(
-                          icon: Icons.image,
-                          title: 'Image D',
-                        ),
-                        CustomCard(
-                          icon: Icons.image,
-                          title: 'Image F',
-                        ),
-                        CustomCard(
-                          icon: Icons.image,
-                          title: 'Image H',
-                        ),
-                        CustomCard(
-                          icon: Icons.image,
-                          title: 'Image J',
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
+                ),
+              );
+            }),
+          ),
         ),
       ),
     );

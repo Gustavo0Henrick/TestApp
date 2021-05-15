@@ -16,7 +16,7 @@ class CustomTextfield extends StatefulWidget {
     this.elevation = 0,
     @required this.height,
     @required this.width,
-    this.obscureText = false,
+    this.obscureText,
     this.borderRadius = 0,
     this.color,
     this.password = false,
@@ -53,11 +53,11 @@ class _CustomTextfieldState extends State<CustomTextfield> {
                       },
                       icon: widget.obscureText
                           ? Icon(
-                              Icons.visibility,
+                              Icons.visibility_off,
                               color: widget.color,
                             )
                           : Icon(
-                              Icons.visibility_off,
+                              Icons.visibility,
                               color: widget.color,
                             ),
                     )
