@@ -31,6 +31,7 @@ class Galery extends StatelessWidget {
                 padding: EdgeInsets.all(15.0),
                 child: Container(
                   child: CustomCard(
+                    
                     icon: Icons.image,
                     title: 'Image $index',
                   ),

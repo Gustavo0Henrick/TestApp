@@ -26,35 +26,39 @@ class CustomBox extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (builder) => Person(index: id)));
             },
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(width: 1, color: Colors.white),
-              ),
-              height: 250,
-              width: 250,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Icon(
-                    icon,
-                    color: color,
-                    size: 120,
-                  ),
-                  Row(
-                    children: [
-                      SizedBox(width: 30),
-                      Text(
-                        "${ListUser.user[id]}, ${ListUser.year[id]} anos \n${ListUser.city[id]}",
-                        style: TextStyle(
-                          color: color,
-                          fontSize: 18,
+            child: Card(
+              color: Colors.transparent,
+              elevation: 10,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(width: 1, color: Colors.white),
+                ),
+                height: 250,
+                width: 250,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Icon(
+                      icon,
+                      color: color,
+                      size: 120,
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(width: 30),
+                        Text(
+                          "${ListUser.user[id]}, ${ListUser.year[id]} anos \n${ListUser.city[id]}",
+                          style: TextStyle(
+                            color: color,
+                            fontSize: 18,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

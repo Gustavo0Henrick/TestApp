@@ -13,7 +13,7 @@ class Home extends StatelessWidget {
               width: 350,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  elevation: 5,
+                  elevation: 10,
                   primary: Colors.white,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
