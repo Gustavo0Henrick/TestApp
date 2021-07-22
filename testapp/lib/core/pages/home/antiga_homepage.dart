@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/core/page/config.dart';
-import 'package:testapp/core/page/friend.dart';
-import 'package:testapp/core/page/home.dart';
-import 'package:testapp/core/page/profile.dart';
-import 'package:testapp/core/page/galery.dart';
+import 'package:testapp/core/pages/config.dart';
+import 'package:testapp/core/pages/friend.dart';
+import 'package:testapp/core/pages/galery.dart';
+import 'package:testapp/core/pages/home.dart';
+import 'package:testapp/core/pages/profile.dart';
 
 class HomePage extends StatefulWidget {
   final int id;

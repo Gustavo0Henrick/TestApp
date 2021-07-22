@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/core/page/person.dart';
+import 'package:testapp/core/pages/person.dart';
 import 'package:testapp/core/user_list.dart';
 
 class CustomBox extends StatelessWidget {

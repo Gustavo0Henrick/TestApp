@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/core/user_list.dart';
-import 'package:testapp/ui/login.dart';
+import 'package:testapp/core/pages/login/login_page.dart';
+
 
 class Config extends StatelessWidget {
   @override
@@ -93,7 +93,7 @@ class Config extends StatelessWidget {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (builder) => Login()));
+                                    builder: (builder) => LoginPage()));
                           },
                           child: Text(
                             'Sair',
